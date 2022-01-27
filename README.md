@@ -33,5 +33,3 @@ $ git push -u origin <your-assignment-branch>
 ```
 5. Сделайте Pull Request из созданной вами ветки в ветку master с названием "Отчет, <фамилия> <имя>", (например, "Отчет, Иванов Иван"). О том, как сделать реквест, написано [здесь](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 6. При наличии замечаний повторите шаги 4 и 5, новый request делать не надо.
-
-<strong>Не делайте мердж пулл-реквестов в мастер! <strong>
