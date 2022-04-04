@@ -27,8 +27,8 @@ wg genkey | tee /etc/wireguard/privatekey | wg pubkey | tee /etc/wireguard/publi
 ```sh
 echo "[Interface]" >> wg0.conf
 echo "Address = 10.0.0.1/24" >> wg0.conf				# IP-адрес сервера в VPN сети
-echo "PostUp = iptables -A FORWARD -i %i -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
-echo "PostDown = iptables -D FORWARD -i %i -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
+echo "PostUp = iptables -A FORWARD -i %i -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE" >> wg0.conf
+echo "PostDown = iptables -D FORWARD -i %i -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE" >> wg0.conf
 echo "ListenPort = 51820" >> wg0.conf
 echo "PrivateKey = <Server_private_key>" >> wg0.conf	# Приватный ключ сервера из файла 'privatekey'
 ```
