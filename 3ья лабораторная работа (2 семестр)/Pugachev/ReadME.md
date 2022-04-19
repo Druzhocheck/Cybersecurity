@@ -58,7 +58,7 @@ PublicKey = <СLIENT-PUBLIC-KEY>
 AllowedIPs = 10.0.0.2/32
 ```
 В конечном итоге серверная часть юудет иметь вид:
-![Файл wg0.conf](https://github.com/Druzhocheck/Cybersecurity/blob/main/3%D1%8C%D1%8F%20%D0%BB%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20(2%20%D1%81%D0%B5%D0%BC%D0%B5%D1%81%D1%82%D1%80)/Pugachev/img/wg0.png)
+![Файл wg0.conf](https://github.com/Druzhocheck/Cybersecurity/blob/main/3%D1%8C%D1%8F%20%D0%BB%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20(2%20%D1%81%D0%B5%D0%BC%D0%B5%D1%81%D1%82%D1%80)/Pugachev/img/ipsec.png)
 Перезапустить сервис:
 ```sh
 systemctl restart wg-quick@wg0
