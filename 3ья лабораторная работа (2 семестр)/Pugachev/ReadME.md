@@ -75,6 +75,6 @@ wget https://git.io/vpnsetup -qO vpn.sh && sudo sh vpn.sh
 ```
 Затем следует добавить клиента.
 Необходимы файлы на клиентской стороне:
-![IPSec](https://github.com/Druzhocheck/Cybersecurity/tree/main/3%D1%8C%D1%8F%20%D0%BB%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20(2%20%D1%81%D0%B5%D0%BC%D0%B5%D1%81%D1%82%D1%80)/Pugachev/img/ipsec.png)
+![IPSec](https://github.com/Druzhocheck/Cybersecurity/blob/main/3%D1%8C%D1%8F%20%D0%BB%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20(2%20%D1%81%D0%B5%D0%BC%D0%B5%D1%81%D1%82%D1%80)/Pugachev/img/ipsec.png)
 ### Настройка клиентской части
 Необходимо перенести файл с сервера *.p12(клиент). Запустить специальный файл сценария, который находящийся в той же папке, что и *.p12. Заполнить информацию о учетныйх данных VPN и подключиться.
