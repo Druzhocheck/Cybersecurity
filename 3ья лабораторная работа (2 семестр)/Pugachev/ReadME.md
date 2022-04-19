@@ -58,14 +58,14 @@ PublicKey = <СLIENT-PUBLIC-KEY>
 AllowedIPs = 10.0.0.2/32
 ```
 В конечном итоге серверная часть юудет иметь вид:
-![](/img/wg0.png)
+![Файл wg0.conf](/Pugachev/img/wg0.png)
 Перезапустить сервис:
 ```sh
 systemctl restart wg-quick@wg0
 ```
 И в клиентской части подключить туннель.
 Подключение примет вид:
-![](/img/connect.jpg)
+![Подключение](/Pugachev/img/connect.jpg)
 ## IPSec/IKEv2
 ### Настройка серверной части
 В качестве сервера используется Ubuntu Server 20.04.
