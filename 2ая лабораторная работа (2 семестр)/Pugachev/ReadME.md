@@ -11,7 +11,7 @@ echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee 
 apt update && apt install elasticsearch
 ```
 Затем следует отредактировать файл elasticsearch.yml:
-![Файл elasticsearch.yml]()
+![Файл elasticsearch.yml](https://github.com/Druzhocheck/Cybersecurity/blob/main/2%D0%B0%D1%8F%20%D0%BB%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20(2%20%D1%81%D0%B5%D0%BC%D0%B5%D1%81%D1%82%D1%80)/Pugachev/img/elasticsearch.conf.png)
 После, можно запустить сервис:
 ```sh
 sudo systemctl start elasticsearch
@@ -29,16 +29,16 @@ sudo systemctl start kibana
 /usr/share/elasticsearch/bin/elasticsearch-setup-passwords auto
 ```
 И отредактирвать файл kibana.yml:
-![Файл kibana.yml]()
+![Файл kibana.yml](https://github.com/Druzhocheck/Cybersecurity/blob/main/2%D0%B0%D1%8F%20%D0%BB%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20(2%20%D1%81%D0%B5%D0%BC%D0%B5%D1%81%D1%82%D1%80)/Pugachev/img/kibana.yml.png)
 ## Установка и настройка Logstash
 Logstash позволяет собирать данные из разных источников и перобразовать и в общий формат.
 ```sh
 sudo apt install logstash
 ```
 В каталоге /etc/logstash/conf.d/ необходимо создать файлы input.conf и output.conf:
-![Файл input.conf]()
+![Файл input.conf](https://github.com/Druzhocheck/Cybersecurity/blob/main/2%D0%B0%D1%8F%20%D0%BB%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20(2%20%D1%81%D0%B5%D0%BC%D0%B5%D1%81%D1%82%D1%80)/Pugachev/img/input.conf.png)
 Данные принимаются на 5044 порт
-![Файл output.conf]()
+![Файл output.conf](https://github.com/Druzhocheck/Cybersecurity/blob/main/2%D0%B0%D1%8F%20%D0%BB%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20(2%20%D1%81%D0%B5%D0%BC%D0%B5%D1%81%D1%82%D1%80)/Pugachev/img/output.conf.png)
 В данном файле разбивается информация по типу и передается уже в elasticsearch на порт 9200.
 ## Установка и настройка Filebeat
 Filebeat служит для сбора логов и передачи логов.
@@ -48,11 +48,11 @@ sudo nano /etc/filebeat/filebeat.yml
 sudo filebeat modules enable system
 ```
 Следует отредактировать файл filebeat.yml:
-![Файл filebeat.yml]()
+![Файл filebeat.yml](https://github.com/Druzhocheck/Cybersecurity/blob/main/2%D0%B0%D1%8F%20%D0%BB%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20(2%20%D1%81%D0%B5%D0%BC%D0%B5%D1%81%D1%82%D1%80)/Pugachev/img/logstash.conf.png)
 ## Установка и настройка Winlogbeat
 Для настройки централизованного сервера сбора логов с Windows серверов, устанавливается сборщика системных логов winlogbeat, который можно скачать с официального сайта.
 В корневой папке необходимо создать конфигурационный файл winlogbeat.yml.
-![Файл winlogbeat.yml]()
+![Файл winlogbeat.yml](https://github.com/Druzhocheck/Cybersecurity/blob/main/2%D0%B0%D1%8F%20%D0%BB%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20(2%20%D1%81%D0%B5%D0%BC%D0%B5%D1%81%D1%82%D1%80)/Pugachev/img/winlogbeat.conf.png)
 ## Проксирование подключений к Kibana через Nginx
 Проксирование реализуется через сервис nginx:
 ```sh
